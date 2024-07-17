@@ -1,0 +1,89 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+
+.warehouseLabel {
+	display: none;
+	@include tablet {
+		color: $slate;
+		display: flex;
+		background-color: $light-grey;
+		padding: 0 32px;
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	&-label {
+		@include tablet {
+			margin-right: 4px;
+			font-weight: 600;
+		}
+	}
+
+	&-container {
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
+		@include desktop {
+			justify-content: unset;
+		}
+	}
+
+	&-column {
+		@include tablet {
+			h4 {
+				@include h4-style;
+			}
+			display: flex;
+			flex-direction: row;
+		}
+
+		
+		&__warehouse {
+			@include tablet {
+				flex-basis: 10%;
+			}
+
+			@include desktop {
+				width: 200px;
+				flex-basis: unset;
+			}
+		}
+		&__address {
+			@include tablet {
+				flex-basis: 20%;
+			}
+			@include desktop {
+				width: 300px;
+				flex-basis: unset;
+			}
+		}
+		&__contact {
+			@include tablet {
+				flex-basis: 18%;
+			}
+			@include desktop {
+				width: 180px;
+				flex-basis: unset;
+			}
+		}
+		&__info {
+			@include tablet {
+				flex-basis: 25%;
+			}
+			@include desktop {
+				width: 220px;
+				flex-basis: unset;
+			}
+		}
+	}
+
+	&-btn {
+		background: none;
+		border: none;
+		padding: 0;
+	}
+}

@@ -1,0 +1,95 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typography' as *;
+
+
+hr {
+	border: 1px $cloud solid;
+	margin: 0;
+	@include tablet {
+		display: none;
+	}
+}
+
+.warehouses {
+	width: 100%;
+	
+	&-container {
+		display: flex;
+		box-sizing: border-box;
+		flex-direction: column;
+		justify-content: center;
+		padding: 36px 24px 24px;
+
+		@include tablet {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 32px 32px 24px;
+		}
+
+		&__flex {
+			@include tablet {
+			}
+		}
+	}
+
+	&-header {
+		&__title {
+			margin: 0;
+			padding-bottom: 24px;
+			@include h1-style;
+
+			@include tablet {
+				padding: 0;
+			}
+		}
+	}
+
+	&-form {
+		box-sizing: border-box;
+		padding-bottom: 16px;
+
+		@include tablet {
+			padding: 0;
+		}
+
+		&__container {
+			@include tablet {
+				display: flex;
+			}
+		}
+
+		&__search {
+			height: 36px;
+			width: 100%;
+			border-radius: 20px;
+			padding: 0 1rem;
+			@include p2-style;
+			box-sizing: border-box;
+			border: solid 1px $cloud;
+			background-image: url("../../assets/icons/search-24px.svg");
+			background-repeat: no-repeat;
+			background-position: calc(100% - 1rem) center;
+
+			@include tablet {
+				width: 185px;
+				height: 38px;
+			}
+
+			@include desktop {
+				width: 274px;
+			}
+		}
+
+		&__button {
+			&-link {
+				text-decoration: none;
+				@include tablet {
+					height: 36px;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
